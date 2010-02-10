@@ -17,6 +17,7 @@ BOOL EXTrackMatchesCriteria(QTTrack *track) {
 int main (int argc, const char * argv[]) {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
+	// fixme: usage info when input is invalid
 	NSString *path = [[NSProcessInfo processInfo].arguments objectAtIndex: 1];
 	NSString *outputPath = [[NSProcessInfo processInfo].arguments objectAtIndex: 2];
 	NSError *error = nil; 
@@ -33,6 +34,7 @@ int main (int argc, const char * argv[]) {
 			}
 		}
 		
+		// fixme: by default, refuse to overwrite existing files
 		if(![movie writeToFile: outputPath withAttributes: [NSDictionary dictionaryWithObject: [NSNumber numberWithBool: YES] forKey: QTMovieFlatten] error: &error]) {
 			return EXLogError(error);
 		}

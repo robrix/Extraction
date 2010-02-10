@@ -1,0 +1,9 @@
+#Extraction
+
+Extracts audio tracks from QuickTime files.
+
+Use it like so:
+
+	Extraction /path/to/source/file /path/to/output/file
+
+Enjoy!

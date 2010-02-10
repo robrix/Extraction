@@ -1,0 +1,8 @@
+// Extraction_Prefix.pch
+// Created by Rob Rix on 2010-02-10
+// Copyright 2010 Monochrome Industries
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <QTKit/QTKit.h>
+#endif
